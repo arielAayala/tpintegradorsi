@@ -68,8 +68,7 @@ export default function ForoDetailPage({ params }) {
 					// Primero intentamos con la consulta ordenada
 					const repliesQuery = query(
 						collection(db, "respuestas-foro"),
-						where("topicId", "==", topicId),
-						orderBy("createdAt", "asc")
+						where("topicId", "==", topicId)
 					);
 
 					const repliesSnapshot = await getDocs(repliesQuery);
